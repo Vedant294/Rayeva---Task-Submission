@@ -1,7 +1,7 @@
-import { connectDB } from "../../lib/mongodb.js";
-import { askAI, extractJSON } from "../../lib/ai.js";
-import Proposal from "../../models/Proposal.js";
-import AILog from "../../models/AILog.js";
+import { connectDB } from "../lib/mongodb.js";
+import { askAI, extractJSON } from "../lib/ai.js";
+import Proposal from "../models/Proposal.js";
+import AILog from "../models/AILog.js";
 
 export const handler = async (event) => {
   if (event.httpMethod !== "POST") {
