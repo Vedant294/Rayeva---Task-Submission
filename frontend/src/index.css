@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-950 text-gray-100;
+  font-family: 'Inter', sans-serif;
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-gradient-to-r from-green-400 to-emerald-300 bg-clip-text text-transparent;
+  }
+  .card {
+    @apply bg-gray-900/80 border border-gray-800 rounded-2xl;
+  }
+  .input {
+    @apply w-full bg-gray-800/60 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-green-500 focus:ring-1 transition-all;
+  }
+  .btn-primary {
+    @apply bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 disabled:opacity-40 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200;
+  }
+  .btn-blue {
+    @apply bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 disabled:opacity-40 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200;
+  }
+  .btn-purple {
+    @apply bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-500 hover:to-violet-500 disabled:opacity-40 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200;
+  }
+  .section-title {
+    @apply text-3xl font-bold text-white mb-1;
+  }
+  .section-sub {
+    @apply text-gray-400 text-sm mb-8 leading-relaxed;
+  }
+  .fade-up {
+    animation: fadeUp 0.4s ease forwards;
+  }
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #030712; }
+::-webkit-scrollbar-thumb { background: #374151; border-radius: 9999px; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
