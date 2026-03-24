@@ -3,9 +3,20 @@ import Product from "../models/Product.js";
 import Proposal from "../models/Proposal.js";
 import ImpactReport from "../models/ImpactReport.js";
 
+const HEADERS = {
+  "Content-Type": "application/json",
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "Content-Type",
+  "Access-Control-Allow-Methods": "GET, OPTIONS",
+};
+
 export const handler = async (event) => {
-  if (event.httpMethod !== "GET")
-    return { statusCode: 405, body: JSON.stringify({ error: "Method not allowed" }) };
+  if (event.httpMethod === "OPTIONS") {
+    return { statusCode: 204, headers: HEADERS, body: "" };
+  }
+  if (event.httpMethod !== "GET") {
+    return { statusCode: 405, headers: HEADERS, body: JSON.stringify({ error: "Method not allowed" }) };
+  }
 
   try {
     await connectDB();
@@ -26,6 +37,7 @@ export const handler = async (event) => {
 
     return {
       statusCode: 200,
+      headers: HEADERS,
       body: JSON.stringify({
         success: true,
         stats: {
@@ -39,6 +51,7 @@ export const handler = async (event) => {
       }),
     };
   } catch (err) {
-    return { statusCode: 500, body: JSON.stringify({ error: "Failed to fetch dashboard data", details: err.message }) };
+    console.error(err);
+    return { statusCode: 500, headers: HEADERS, body: JSON.stringify({ error: "Failed to fetch dashboard data", details: err.message }) };
   }
 };
