@@ -6,6 +6,10 @@
 [build.environment]
   NODE_VERSION = "18"
 
+[functions]
+  node_version = "18"
+  timeout = 30
+
 [dev]
   command = "npm run dev"
   port = 3000
