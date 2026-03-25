@@ -8,7 +8,6 @@
 
 [functions]
   node_bundler = "esbuild"
-  timeout = 30
   external_node_modules = ["mongoose", "mongodb"]
 
 [dev]
