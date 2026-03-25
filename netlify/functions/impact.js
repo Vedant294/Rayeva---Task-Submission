@@ -1,7 +1,7 @@
-import { connectDB } from "../lib/mongodb.js";
-import { askAI, extractJSON } from "../lib/ai.js";
-import ImpactReport from "../models/ImpactReport.js";
-import AILog from "../models/AILog.js";
+import { connectDB } from "./lib/mongodb.js";
+import { askAI, extractJSON } from "./lib/ai.js";
+import ImpactReport from "./models/ImpactReport.js";
+import AILog from "./models/AILog.js";
 
 const HEADERS = {
   "Content-Type": "application/json",

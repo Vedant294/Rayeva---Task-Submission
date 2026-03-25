@@ -1,5 +1,5 @@
-import { connectDB } from "../lib/mongodb.js";
-import AILog from "../models/AILog.js";
+import { connectDB } from "./lib/mongodb.js";
+import AILog from "./models/AILog.js";
 
 const HEADERS = {
   "Content-Type": "application/json",
