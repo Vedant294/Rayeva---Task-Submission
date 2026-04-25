@@ -1,12 +1,12 @@
 # 🌿 Rayeva – AI Sustainable Commerce Platform
 
 
-Live link : https://rayeva-ai.netlify.app/
+Live link : https://rayeva-ecommerce.netlify.app/
 
 
 > An AI-powered platform that automates product cataloging, B2B proposal generation, and sustainability impact reporting — built with React, Node.js, MongoDB Atlas, and Groq (Llama 3.3).
 
-live link : https://agent-69c3812b8f725eb68e86312e--rayeva-ai.netlify.app/
+live link : https://rayeva-ecommerce.netlify.app/
 
 ## Architecture Overview
 
