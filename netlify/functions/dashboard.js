@@ -1,7 +1,7 @@
-import { connectDB } from "../lib/mongodb.js";
-import Product from "../models/Product.js";
-import Proposal from "../models/Proposal.js";
-import ImpactReport from "../models/ImpactReport.js";
+import { connectDB } from "./lib/mongodb.js";
+import Product from "./models/Product.js";
+import Proposal from "./models/Proposal.js";
+import ImpactReport from "./models/ImpactReport.js";
 
 const HEADERS = {
   "Content-Type": "application/json",
