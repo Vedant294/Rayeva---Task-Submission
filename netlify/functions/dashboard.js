@@ -18,6 +18,11 @@ export const handler = async (event) => {
     return { statusCode: 405, headers: HEADERS, body: JSON.stringify({ error: "Method not allowed" }) };
   }
 
+  // Debug: check env vars are present
+  if (!process.env.MONGO_URI) {
+    return { statusCode: 500, headers: HEADERS, body: JSON.stringify({ error: "MONGO_URI not set" }) };
+  }
+
   try {
     await connectDB();
 
